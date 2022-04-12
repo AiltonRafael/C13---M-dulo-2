@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #EBB014;
+    height: 10vh;
+}
+
+div {
+    background-color: tomato;
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+div#container_principal {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+div.container_genecico {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
+
+div#color_pallete {
+    height: 200px;
+    background-image: linear-gradient(to bottom right, blue, red, violet);
+}
