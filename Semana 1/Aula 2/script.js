@@ -22,7 +22,7 @@ const span = document.querySelector('span')
 const img = document.querySelector('img')
 console.dir(img.attributes[0].nodeValue)
 
-span.addEventListener("click", () => {
+span.addEventListener("mouseover", () => {
     console.log('EU FUI CLICADO')
 })
 
