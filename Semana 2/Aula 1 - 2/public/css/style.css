@@ -1,0 +1,83 @@
+* { /* representa todas as tags */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    height: 10%;
+    background-color: black;
+    color: white;
+}
+
+header a {
+    height: 100%;
+}
+
+header img#logo {
+    height: 100%;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: yellow;
+}
+
+main {
+    min-height: 80%;
+    padding: 10px;
+}
+
+section#cavaleiros {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
+   justify-content: center;
+   padding-top: 16px;
+}
+
+article.card {
+    height: 300px;
+    width: 204px;
+    border: 1px solid red;
+}
+
+article.card div.card_image {
+    height: 85%;
+}
+
+article.card img {
+    height: 100%;
+}
+
+article.card div.nome__do__cavaleiro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15%;
+}
+
+footer {
+    height: 10%;
+    background-color: black;
+    color: white;
+}
