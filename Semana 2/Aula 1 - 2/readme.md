@@ -14,7 +14,6 @@ As ferramentas usadas para este projeto são:
 </div>
 
 ## Contato
-
-<a href="https://www.linkedin.com/in/ailton-rafael-9aa802186/" target="_blank"> 
-    <img src="https://img.icons8.com/cute-clipart/128/000000/linkedin.png"/>
+<a href="https://www.linkedin.com/in/ailton-rafael-9aa802186/">
+    <img src="https://img.icons8.com/office/80/000000/linkedin.png"/>
 </a>
