@@ -6,15 +6,14 @@ Este projeto foi realizado com fins de aprendizado no curso de FullStack da Blue
 ## Stacks
 As ferramentas usadas para este projeto são:
 
-<div style="display: flex">
-    <img src="https://img.icons8.com/color/144/000000/javascript--v1.png"/>
-    <img src="https://img.icons8.com/ios-filled/150/000000/css3.png"/>
-    <img src="https://img.icons8.com/color/144/000000/html-5--v2.png"/>
-    <img src="https://img.icons8.com/color/144/000000/nodejs.png"/>
-</div>
+
+<img src="https://img.icons8.com/color/96/000000/javascript--v1.png"/>
+<img src="https://img.icons8.com/ios-filled/100/000000/css3.png"/>
+<img src="https://img.icons8.com/color/144/000000/html-5--v2.png"/>
+<img src="https://img.icons8.com/color/144/000000/nodejs.png"/>
 
 ## Contato
 
-<a href="https://www.linkedin.com/in/ailton-rafael-9aa802186/"> 
+<a href="https://www.linkedin.com/in/ailton-rafael-9aa802186/" target="_blank"> 
     <img src="https://img.icons8.com/cute-clipart/128/000000/linkedin.png"/>
 </a>
