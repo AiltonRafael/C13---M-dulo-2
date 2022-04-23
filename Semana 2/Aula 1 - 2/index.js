@@ -5,6 +5,9 @@ const __dirname = path.resolve(path.dirname('')) // __dirname serve para informa
 
 const app = express() // instnciando o express dentro da const app
 
+app.use(express.urlencoded({extended: true})) // O corpo (body) da requisição
+app.use(express.json()) // converter para JSON
+
 app.set("view engine", "ejs") // faz com que o express reconheça o EJS como motor de visualização
 app.use(express.static(path.join(__dirname, "public")))
 
@@ -77,4 +80,11 @@ app.get('/detalhes/:id', (req, res) => {
 
 app.get('/cadastro', (req, res) => {
     res.render('cadastro.ejs')
+})
+app.post('/cadastro', (req, res) => {
+    let i = cavaleiros[cavaleiros.length-1].id + 1
+    const { nome, signos, tipo, iframe, img  } = req.body
+    cavaleiros.push({id: i, nome, signos, tipo, iframe, img})
+    console.log(cavaleiros)
+    res.redirect('/')
 })

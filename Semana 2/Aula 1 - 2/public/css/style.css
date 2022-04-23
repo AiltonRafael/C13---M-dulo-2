@@ -46,6 +46,29 @@ main {
     padding: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 200px;
+}
+
+form fieldset fieldset {
+    display: flex;
+    gap: 10px;
+    border: none;
+}
+
+form fieldset#field_main {
+    border:1px solid #000
+}
+
+form legend {
+    background-color: black;
+    color: white;
+}
+
 section#detalhes {
     width: 100%;
     display: flex;
