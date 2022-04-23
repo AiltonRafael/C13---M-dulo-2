@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,42 @@
     <link href="/css/style.css" rel="stylesheet">
     <title> Detalhes </title>
 </head>
+
 <body>
-    <%- include('./partials/header.ejs') %> 
+    <%- include('./partials/header.ejs') %>
     <main>
-        <%= cavaleiro[0].nome %> 
+        <section id="detalhes">
+            <h1> <%= cavaleiro.nome %> </h1>
+            <iframe <%= cavaleiro.iframe %>> </iframe>
+            <table>
+                <!-- <tr> </tr> table row = linha da tabela -->
+                <!-- <td> </td> table dir = coluna da tabela -->
+                <!-- <thead> </thead> <!-- Cabeçalho da Tabela -->
+                <!-- <tbody> </tbody> <!-- Corpo da minha tabela -->
+                <!-- <tfoot> </tfoot> Rodapé da minha da tabela -->
+                <!-- th === td - usado para o thead -->
+
+                <thead>
+                    <th colspan="2"> Detalhes </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Nome </td>
+                        <td> <%= cavaleiro.nome %>  </td>
+                    </tr>
+
+                    <tr>
+                        <td> Signo</td>
+                        <td> <%= cavaleiro.signos %> </td>
+                    </tr>
+                    <tr>
+                        <td> Tipo </td>
+                        <td> <%= cavaleiro.tipo %> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </body>
+
 </html>
