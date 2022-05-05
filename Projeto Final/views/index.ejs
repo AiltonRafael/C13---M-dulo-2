@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71f92ea1b3.js" crossorigin="anonymous"></script>
     <title> Index </title>
 </head>
+
 <body>
-    <%- include('./partials/header.ejs') %> 
+    <%- include('./partials/header.ejs') %>
     <main>
-        MAIN
+        <div id="sub__header"> </div>
+        <section id="card__container">
+            <% listFilmes.forEach(element => { %>
+            <a href="/detalhes/<%= element.id %> ">
+                <article class="cards">
+                    <div class="card_img">
+                        <img src="<%= element.img %> " alt="<%= element.nome %> ">
+                    </div>
+                    <div class="card_name">
+                        <%= element.nome %>
+                    </div>
+                </article>
+            </a>
+            <% }) %>
+        </section>
     </main>
-    <%- include('./partials/footer.ejs') %> 
+    <button> </button>
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
