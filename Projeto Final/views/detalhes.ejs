@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,59 @@
     <link href="/css/style.css" rel="stylesheet">
     <title> Detalhes </title>
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <div id="sub__header"> 
-            <%= filmesDetalhes.nome %> 
-        </div> 
-        <section id="details_container"> 
+        <div id="sub__header">
+            <%= filmesDetalhes.nome %>
+        </div>
+        <section id="details_container">
             <iframe <%= filmesDetalhes.iframe %>> </iframe>
-            <table>
+            <table> 
                 <thead> 
-                    <th> Detalhes </th>
+                    <th colspan="2"> Detalhes </th>
                 </thead>
                 <tbody> 
-                    <td> 
-                        <tr> Filme </tr>
-                        <tr> <%= filmesDetalhes.nome %> </tr>
-                    </td>
+                    <tr> 
+                        <td> Diretor </td>
+                        <td> <%= filmesDetalhes.diretor %>  </td>
+                    </tr>
+                    <tr>
+                        <td> Duração </td>
+                        <td> <%= filmesDetalhes.duracao %> minutos  </td>
+                    </tr>
+                    <tr>
+                        <td> Lançament </td>
+                        <td> <%= filmesDetalhes.ano %> </td>
+                    </tr>
                 </tbody>
                 <tfoot> </tfoot>
             </table>
+
+            <!-- <table>
+                <thead>
+                    <th colspan="2">Detalhes</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Sum</td>
+                    </tr>
+                </tfoot>
+            </table> -->
         </section>
     </main>
-    <%- include('./partials/footer.ejs') %>  
+    <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

@@ -11,6 +11,8 @@ let __dirname = path.resolve(path.dirname(''))
 
 console.log(__dirname)
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.set('view engine', 'ejs')
 app.use(routers)
 app.use(express.static(path.join(__dirname, 'public')))

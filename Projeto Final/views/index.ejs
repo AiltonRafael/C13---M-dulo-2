@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/71f92ea1b3.js" crossorigin="anonymous"></script>
     <title> Index </title>
 </head>
 
@@ -26,6 +25,10 @@
                     </div>
                 </article>
             </a>
+            <div class="btn__container">
+                <a href="/deletar/<%= element.id %> "> <i class="fa-solid fa-trash"></i> </a>
+                <a href="/editar/<%= element.id %> "> <i class="fa-solid fa-pencil"></i> </a>
+            </div>
             <% }) %>
         </section>
     </main>
