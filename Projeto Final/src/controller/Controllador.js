@@ -1,7 +1,3 @@
-import { user } from "pg/lib/defaults"
-import {
-    connection
-} from "../database/connection.js"
 import {
     filmes
 } from "../model/filmes.js"
@@ -16,7 +12,7 @@ export const getIndex = async (req, res) => {
         res.render('index.ejs', {
             listFilmes
         })
-    } catch(error) {
+    } catch (error) {
         res.send(error.message)
     }
 }
@@ -28,8 +24,7 @@ export const getDetalhes = async (req, res) => {
         res.render('detalhes.ejs', {
             filmesDetalhes
         })
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
@@ -43,8 +38,7 @@ export const getDeletar = async (req, res) => {
             }
         })
         res.redirect('/')
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
@@ -54,17 +48,30 @@ export const getCriar = (req, res) => {
 }
 
 export const postCriar = async (req, res) => {
-    const { nome, diretor, img, duracao, ano, iframe } = req.body
+    const {
+        nome,
+        diretor,
+        img,
+        duracao,
+        ano,
+        iframe
+    } = req.body
     try {
         // await connection.query(`INSERT INTO filmes (nome, diretor, img, duracao, ano, iframe) VALUES('${nome}', '${diretor}', '${img}', ${duracao}, '${ano}', '${iframe}')`) 
-        if(!nome || !diretor || !img || !duracao || !ano || !iframe){
+        if (!nome || !diretor || !img || !duracao || !ano || !iframe) {
             res.send('Todos os campos são obrigatórios!')
         } else {
-            await filmes.create({nome, diretor, img, duracao, ano, iframe})
+            await filmes.create({
+                nome,
+                diretor,
+                img,
+                duracao,
+                ano,
+                iframe
+            })
             res.render('criar.ejs')
         }
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
@@ -75,15 +82,21 @@ export const getEditar = async (req, res) => {
         res.render('editar.ejs', {
             filmeAtual
         })
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
 
 export const postEditar = async (req, res) => {
     try {
-        const { nome, diretor, img, duracao, ano, iframe } = req.body
+        const {
+            nome,
+            diretor,
+            img,
+            duracao,
+            ano,
+            iframe
+        } = req.body
         await filmes.update({
             nome: nome,
             diretor: diretor,
@@ -97,8 +110,7 @@ export const postEditar = async (req, res) => {
             }
         })
         res.redirect('/')
-    }
-    catch(error){
+    } catch (error) {
         res.send(error.message)
     }
 }
